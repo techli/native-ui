@@ -1,0 +1,58 @@
+<view class="page-phone">
+    <view class="header">
+      <view class="wx-title">李竹园回收站</view>
+      <view class="wx-desc">清洁您家，开心大家</view>
+    </view>
+
+    <view class="content">
+
+      <view class="wx-cell">
+         <view class="icon">
+            <image src="{{adrimg}}" class="icon-postion"></image>
+         </view>
+         <view class="cell-bd" bindtap="getLocation">沈丘县白集镇李竹园村</view>
+         <view class="cell-fd">
+            <image src="{{jtimg}}" class="icon-postion"></image>
+         </view>
+      </view>
+
+      <view class="wx-cell">
+         <view class="icon">
+            <image src="{{clockimg}}" class="icon-postion"></image>
+         </view>
+         <view class="cell-bd">9：00 - 18：00</view>
+      </view>
+
+      <view class="wx-cell">
+         <view class="icon" >
+            <image src="{{comment}}" class="icon-postion"></image>
+         </view>
+         <view class="cell-bd" bindtap="preViewWX">微信号</view>
+         <view class="cell-fd">
+           <image src="{{jtimg}}" class="icon-postion"></image>
+         </view>
+      </view>
+
+      <view class="wx-cell" bindtap="calling">
+         <view class="icon">
+            <image src="{{phoneimg}}" class="icon-postion"></image>
+         </view>
+         <view class="cell-bd">151 3824 4113</view>
+         <view class="cell-fd">
+           <image src="{{jtimg}}" class="icon-postion"></image>
+         </view>
+      </view>
+
+    </view>
+
+    <view class="content">
+      <form bindsubmit="submit">
+         <view class="section">
+         <textarea placeholder="期待您的反馈"   focus="{{focus}}" />
+         <view class="btn-area">
+            <button form-type="submit"  bindtap="bindButtonTap">提交</button>
+         </view>
+         </view>
+         </form>
+    </view>
+</view>

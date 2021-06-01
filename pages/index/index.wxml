@@ -1,0 +1,92 @@
+<!--index.wxml-->
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+</swiper>
+<view class="app-title">功能菜单</view>
+<view class="plate">
+  <navigator url="/pages/appointment/appointment" open-type="switchTab" hover-class="other-navigator-hover" class="plate-item">
+     <view class="plate-img">
+       <image src="{{appointment}}"></image>
+       </view>
+       <text class="plate-info">
+        回收预约
+       </text>
+  </navigator>
+  <navigator url="/pages/teacher/teacher" hover-class="navigator-hover" class="plate-item">
+     <view class="plate-img">
+       <image src="{{recycllist}}"></image>
+       </view>
+       <text class="plate-info">
+        回收列表
+       </text>
+  </navigator>
+  <navigator url="/pages/appointment/appointment" open-type="switchTab" hover-class="other-navigator-hover" class="plate-item">
+     <view class="plate-img">
+       <image src="{{shopImg}}"></image>
+       </view>
+       <text class="plate-info">
+        二手商品
+       </text>
+  </navigator>
+  <navigator url="/pages/about/about" hover-class="navigator-hover" class="plate-item">
+     <view class="plate-img">
+       <image src="{{contactUs}}"></image>
+       </view>
+       <text class="plate-info">
+        联系我们
+       </text>
+  </navigator>
+</view>
+<view class="clear"></view>
+<view class="appointment">
+ <view class="app-title">回收物品</view>
+  <view class="app-moduler">
+
+    <navigator url="url" class="mod-item">
+      <view class="mod-signup">
+        <image src="{{signupimg}}"></image>
+      </view>
+      <view class="mod-img">
+        <image src="{{imgsrc}}" class="mod-image"></image>
+      </view>
+      <view class="mod-title">
+         <text>标题标题标题标题标题</text>  
+      </view>
+      <view class="mod-info">
+        <view class="mod-icon">
+          <image src="{{iconsrc}}" class="icon"></image>
+        </view>
+        <view class="moinfont">17人已申请</view>
+      </view>
+    </navigator>
+    
+    <navigator url="url" class="mod-item">
+      <view class="mod-signup">
+        <image src="{{signupimg}}"></image>
+      </view>
+      <view class="mod-img">
+        <image src="{{imgsrc}}" class="mod-image"></image>
+      </view>
+      <view class="mod-title">
+         <text>标题标题标题标题标题</text>  
+      </view>
+      <view class="mod-info">
+        <view class="mod-icon">
+          <image src="{{iconsrc}}" class="icon"></image>
+        </view>
+        <view class="moinfont">17人已申请</view>
+      </view>
+    </navigator>
+
+  </view>
+</view>
+<navigator class="more" url="/pages/signup/signup" open-type="switchTab" hover-class="other-navigator-hover">
+  <view class="more-info">查看更多</view>
+  <view class="icon-jt"><image src="{{jtsrc}}" class="iconjtimg"></image></view>
+</navigator>
+<view class="clear"></view>
