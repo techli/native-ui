@@ -2,7 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/appointment/appointment",
-    "pages/about/about"
+    "pages/about/about",
+    "pages/priceList/priceList",
+    "pages/secondGood/secondGood"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -29,13 +31,13 @@
         "selectedIconPath": "image/菜单预约选中.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/priceList/priceList",
         "text": "价格列表",
         "iconPath": "image/菜单价格列表.png",
         "selectedIconPath": "image/菜单回收价格选中.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/secondGood/secondGood",
         "text": "二手商品",
         "iconPath": "image/菜单二手商品.png",
         "selectedIconPath": "image/菜单二手商品选中.png"
