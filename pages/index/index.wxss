@@ -41,7 +41,7 @@
 }
 
 .mod-item{
- width:46%;
+ width:30%;
  height:300rpx;
  float: left;
  margin-left:20rpx;
@@ -70,6 +70,7 @@
   height:45rpx;
   margin-top:15rpx;
   flex-direction:column;
+  text-align:center;
   justify-content: center;
   text-overflow: -o-ellipsis-lastline;
   text-overflow: ellipsis;

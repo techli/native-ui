@@ -1,3 +1,8 @@
 {
-  "navigationBarTitleText": "回收预约"
+  "navigationBarTitleText": "回收预约",
+  "usingComponents": {
+    "mp-upload":"/miniprogram_npm/weui-miniprogram/uploader/uploader",
+    "mp-cells": "/miniprogram_npm/weui-miniprogram/cells/cells",
+    "mp-cell": "/miniprogram_npm/weui-miniprogram/cell/cell"
+  }
 }

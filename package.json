@@ -1,0 +1,22 @@
+{
+  "name": "components",
+  "version": "1.0.0",
+  "description": "小程序教育类模板",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techli/recycle.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/techli/recycle/issues"
+  },
+  "homepage": "https://github.com/techli/recycle#readme",
+  "dependencies": {
+    "weui-miniprogram": "^1.0.8"
+  }
+}
