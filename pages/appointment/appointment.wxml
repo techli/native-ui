@@ -13,17 +13,23 @@
                 bindinput="updateFormData" bindblur="formCheck"/>
                 <icon class="error-icon" type="cancel" color="red" size="16" wx:if="{{formData.phone.error}}"/>
             </view>
+            <view class="input-group {{ formData.email.error ? 'error' : '' }}">
+                <label>上门地址</label>
+                <input type="text" name="email" value="{{formData.email.value}}" data-name="email" placeholder="请输入您的上门地址" 
+                bindinput="updateFormData" bindblur="formCheck"/>
+                <icon class="error-icon" type="cancel" color="red" size="16" wx:if="{{formData.email.error}}"/>
+            </view>
             <view class="input-group {{ formData.phone.error ? 'error' : '' }}">
                 <label>物品名称</label>
                 <input type="text" name="phone" value="{{formData.phone.value}}" data-name="phone" placeholder="请输入您的物品名称" 
                 bindinput="updateFormData" bindblur="formCheck"/>
                 <icon class="error-icon" type="cancel" color="red" size="16" wx:if="{{formData.phone.error}}"/>
             </view>
-            <view class="input-group {{ formData.email.error ? 'error' : '' }}">
-                <label>上门地址</label>
-                <input type="text" name="email" value="{{formData.email.value}}" data-name="email" placeholder="请输入您的上门地址" 
+            <view class="input-group {{ formData.phone.error ? 'error' : '' }}">
+                <label>物品规格</label>
+                <input type="text" name="phone" value="{{formData.phone.value}}" data-name="phone" placeholder="请输入您的物品规格" 
                 bindinput="updateFormData" bindblur="formCheck"/>
-                <icon class="error-icon" type="cancel" color="red" size="16" wx:if="{{formData.email.error}}"/>
+                <icon class="error-icon" type="cancel" color="red" size="16" wx:if="{{formData.phone.error}}"/>
             </view>
             <view class="input-group {{ formData.word.error ? 'error' : '' }}">
                 <label>留言</label>
