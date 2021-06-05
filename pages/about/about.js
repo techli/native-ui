@@ -31,7 +31,7 @@ Page({
     wx.openLocation({
       latitude: 33.479216,
       longitude: 115.089585,
-      name:"李竹园回收站",
+      name:"天天本地宝",
       address:"沈丘县白集镇李竹园村",
       scale: 28
     })

@@ -70,10 +70,10 @@
   height:45rpx;
   margin-top:15rpx;
   flex-direction:column;
-  text-align:center;
   justify-content: center;
   text-overflow: -o-ellipsis-lastline;
   text-overflow: ellipsis;
+  text-align:center;
   overflow: hidden;
 }
 .mod-info{

@@ -17,6 +17,8 @@ Page({
     xianlan:'../../image/线缆.png',
     luntai:'../../image/轮胎.png',
     xiyiji:'../../image/洗衣机.png',
+    woyaogujia:'../../image/我要估价.png',
+    minishop:'../../image/微信小商店.png',
     iconsrc:'../../image/usercount.png',
     jtsrc:'../../image/icon-jt.png',
     imgUrls: [

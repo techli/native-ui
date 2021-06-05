@@ -3,64 +3,39 @@
 var app = getApp()
 Page({
   data: {
-    actionpic: 'http://img.weiye.me/zcimgdir/thumb/t_148784468858aeb55087573.jpg',
-    actionapic: 'http://img.weiye.me/zcimgdir/thumb/t_148784474358aeb587a167c.jpg',
-    actionbpic: 'http://img.weiye.me/zcimgdir/thumb/t_148784476958aeb5a19a2d1.jpg', 
+    num:1,
+    minusStatus:'disable'
   },
-  files: [{
-    url: 'http://mmbiz.qpic.cn/mmbiz_png/VUIF3v9blLsicfV8ysC76e9fZzWgy8YJ2bQO58p43Lib8ncGXmuyibLY7O3hia8sWv25KCibQb7MbJW3Q7xibNzfRN7A/0',
-}, {
-    loading: true
-}, {
-    error: true
-}],
-onLoad() {
-  this.setData({
-      selectFile: this.selectFile.bind(this),
-      uplaodFile: this.uplaodFile.bind(this)
-  })
-},
-chooseImage: function (e) {
-  var that = this;
-  wx.chooseImage({
-      sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
-      sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
-      success: function (res) {
-          // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
-          that.setData({
-              files: that.data.files.concat(res.tempFilePaths)
-          });
-      }
-  })
-},
-previewImage: function(e){
-  wx.previewImage({
-      current: e.currentTarget.id, // 当前显示图片的http链接
-      urls: this.data.files // 需要预览的图片http链接列表
-  })
-},
-selectFile(files) {
-  console.log('files', files)
-  // 返回false可以阻止某次文件上传
-},
-uplaodFile(files) {
-  console.log('upload files', files)
-  // 文件上传的函数，返回一个promise
-  return new Promise((resolve, reject) => {
-      setTimeout(() => {
-          reject('some error')
-      }, 1000)
-  })
-},
-uploadError(e) {
-  console.log('upload error', e.detail)
-},
-uploadSuccess(e) {
-  console.log('upload success', e.detail)
-},
-  calling: function () {
-    wx.makePhoneCall({
-      phoneNumber: '15138244113', 
+   //事件处理函数
+  /*点击减号*/
+  bindMinus: function() {
+    var num = this.data.num;
+    if (num>1) {
+      num--;
+    }
+    var minusStatus = num>1 ? 'normal':'disable';
+    this.setData({
+      num:num,
+      minusStatus:minusStatus
+    })
+  },
+  /*点击加号*/
+  bindPlus: function() {
+    var num = this.data.num;
+    num++;
+    var minusStatus = num > 1 ? 'normal' : 'disable';
+    this.setData({
+      num:num,
+      minusStatus: minusStatus
+    })
+  },
+  /*输入框事件*/
+  bindManual: function(e) {
+    var num = e.detail.value;
+    var minusStatus = num > 1 ? 'normal' : 'disable';
+    this.setData({
+      num:num,
+      minusStatus: minusStatus
     })
   }
 });
