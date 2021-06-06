@@ -1,45 +1,34 @@
 <view class="page">
     <form bindsubmit="formSubmit">
         <view class="form">
-            <view class="input-group {{ formData.name.error ? 'error' : '' }}">
-                <label>联系人</label>
-                <input type="text" name="name" value="{{formData.name.value}}" data-name="name" placeholder="请输入您的姓名" 
-                bindinput="updateFormData" bindblur="formCheck"/>
-                <icon class="error-icon" type="cancel" color="red" size="16" wx:if="{{formData.name.error}}"/>
-            </view>
-            <view class="input-group {{ formData.phone.error ? 'error' : '' }}">
-                <label>联系电话</label>
-                <input type="text" name="phone" value="{{formData.phone.value}}" data-name="phone" placeholder="请输入您的电话号码" 
-                bindinput="updateFormData" bindblur="formCheck"/>
-                <icon class="error-icon" type="cancel" color="red" size="16" wx:if="{{formData.phone.error}}"/>
-            </view>
-            <view class="input-group {{ formData.phone.error ? 'error' : '' }}">
-                <label>物品名称</label>
-                <input type="text" name="phone" value="{{formData.phone.value}}" data-name="phone" placeholder="请输入您的物品名称" 
-                bindinput="updateFormData" bindblur="formCheck"/>
-                <icon class="error-icon" type="cancel" color="red" size="16" wx:if="{{formData.phone.error}}"/>
-            </view>
-            <view class="input-group {{ formData.phone.error ? 'error' : '' }}">
-                <label>物品数量</label>
-                <input type="text" name="phone" value="{{formData.phone.value}}" data-name="phone" placeholder="请输入您的物品数量" 
-                bindinput="updateFormData" bindblur="formCheck"/>
-                <icon class="error-icon" type="cancel" color="red" size="16" wx:if="{{formData.phone.error}}"/>
-            </view>
-            <view class="input-group {{ formData.email.error ? 'error' : '' }}">
-                <label>上门地址</label>
-                <input type="text" name="email" value="{{formData.email.value}}" data-name="email" placeholder="请输入您的上门地址" 
-                bindinput="updateFormData" bindblur="formCheck"/>
-                <icon class="error-icon" type="cancel" color="red" size="16" wx:if="{{formData.email.error}}"/>
+            <view class="input-group">
+                <label><span>*</span>联系人</label>
+                <input type="text" name="name" maxlength= "8" placeholder="请输入您的姓名" />
             </view>
             <view class="input-group">
-                <label></label>
-                <button size="mini" plain = "true">点击获取地址</button>
+                <label><span>*</span>电话号码</label>
+                <input type="text" name="phone" maxlength= "12" placeholder="请输入您的电话号码" />
             </view>
-            <view class="input-group {{ formData.word.error ? 'error' : '' }}">
-                <label>留言</label>
-                <textarea style='height:40px;' name="word" value="{{formData.word.value}}" data-name="word" placeholder="请在这里填写您的要求" 
-                bindinput="updateFormData" bindblur="formCheck"/>
-                <icon class="error-icon" type="cancel" color="red" size="16" wx:if="{{formData.word.error}}"/>
+            <view class="input-group">
+                <label><span>*</span>物品名称</label>
+                <input type="text" name="goodName"  maxlength= "16" placeholder="请输入您的物品名称" />
+            </view>
+            <view class="input-group">
+                <label><text decode="true">&nbsp;</text>物品数量</label>
+                <input type="text" name="goodQuantity" value="1" maxlength= "8" placeholder="请输入您的物品数量" />
+            </view>
+            <view class="input-group">
+                <label><span>*</span>上门地址</label>
+                <input type="text" name="address" value="{{address}}" maxlength= "32" placeholder="请输入您的上门地址" />
+            </view>
+            <view class="input-group" style="height:20px;">
+                <label></label>
+                <button style='top:-20%;border-color: #ece9e9;font-size: 9pt !important;' bindtap="getUserLocation" size="mini" plain = "true">点击获取地址</button>
+            </view>
+            <view class="input-group">
+                <label>备注</label>
+                <textarea style='height:80px;' name="remark" placeholder="请在这里填写您的要求" 
+                maxlength= "128" />
             </view>
         </view>
         <view class="msg">

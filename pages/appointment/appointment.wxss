@@ -46,6 +46,10 @@
   outline: 1px solid red;
 }
 
+.input-group span {
+  color: red;
+}
+
 .msg {
   margin-top: 30rpx;
   padding: 20rpx 42rpx;
