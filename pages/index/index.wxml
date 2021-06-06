@@ -80,77 +80,12 @@
 <view class="appointment">
  <view class="app-title">回收物品</view>
   <view class="app-moduler">
-
-    <view class="mod-item">
+    <view class="mod-item" wx:for="{{myList}}" wx:key="unique" id="{{index}}">
       <view class="mod-img">
-        <image src="{{bingxiang}}" class="mod-image"></image>
+        <image src="{{item.mySrc}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-         <text>冰箱</text>  
-      </view>
-    </view>
-    <view class="mod-item">
-      <view class="mod-img">
-        <image src="{{caidian}}" class="mod-image"></image>
-      </view>
-      <view class="mod-title">
-         <text>彩电</text>  
-      </view>
-    </view>
-    <view class="mod-item">
-      <view class="mod-img">
-        <image src="{{kongtiao}}" class="mod-image"></image>
-      </view>
-      <view class="mod-title">
-         <text>空调</text>  
-      </view>
-    </view>
-    <view class="mod-item">
-      <view class="mod-img">
-        <image src="{{diannao}}" class="mod-image"></image>
-      </view>
-      <view class="mod-title">
-         <text>电脑</text>  
-      </view>
-    </view>
-    <view class="mod-item">
-      <view class="mod-img">
-        <image src="{{xiyiji}}" class="mod-image"></image>
-      </view>
-      <view class="mod-title">
-         <text>洗衣机 </text>  
-      </view>
-    </view>
-    <view class="mod-item">
-      <view class="mod-img">
-        <image src="{{diandongche}}" class="mod-image"></image>
-      </view>
-      <view class="mod-title">
-         <text>电动车</text>  
-      </view>
-    </view>
-    <view class="mod-item">
-      <view class="mod-img">
-        <image src="{{feijiujinshu}}" class="mod-image"></image>
-      </view>
-      <view class="mod-title">
-         <text>铜铁铝</text>  
-      </view>
-     </view> 
-      <view class="mod-item">
-      <view class="mod-img">
-        <image src="{{xianlan}}" class="mod-image"></image>
-      </view>
-      <view class="mod-title">
-         <text>线缆</text>  
-      </view>
-      </view>
-      <view class="mod-item">
-      <view class="mod-img">
-        <image src="{{luntai}}" class="mod-image"></image>
-      </view>
-      <view class="mod-title">
-         <text>橡胶轮胎</text>  
+         <text>{{item.myLabel}}</text>  
       </view>
     </view>
   </view>

@@ -1,2 +1,21 @@
 <!--pages/priceList/priceList.wxml-->
-<text>pages/priceList/priceList.wxml</text>
+<view class="clear"></view>
+<view class='warp'>
+  <view class='list'>
+    <view class='style {{item.id==num?"active":""}}' catchtap='clickList' 
+      wx:for="{{message}}" wx:key="unique" id="{{index}}">
+      {{item.text}}
+    </view>
+  </view>
+  <view class='content'>
+    <view class="mod-item" wx:for="{{content1}}" wx:key="unique" id="{{index}}">
+      <view class="mod-img">
+        <image src="{{item.mySrc}}" class="mod-image"></image>
+      </view>
+      <view class="mod-title">
+         <text>{{item.myLabel}}</text>
+         <text>价格区间：{{item.myRange}}</text>  
+      </view>
+    </view>
+  </view>
+</view>
