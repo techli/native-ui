@@ -1,11 +1,10 @@
 <view class="page-phone">
     <view class="header">
-      <view class="wx-title">李竹园回收站</view>
-      <view class="wx-desc">清洁您家，开心大家</view>
+      <view class="wx-title">天天周边</view>
+      <view class="wx-desc">周边服务，尽在掌中</view>
     </view>
 
     <view class="content">
-
       <view class="wx-cell">
          <view class="icon">
             <image src="{{adrimg}}" class="icon-postion"></image>

@@ -45,28 +45,14 @@ Page({
         duration: 2000//持续的时间
       })
     }
-    wx.request({
-      url: 'http://47.101.151.58:8080/native-api/hello',
-      method: 'get',
-      success: function (res) {
-        console.log(res.data)
-      }
-    })
   },
   getUserLocation: function (options){
     var that = this;
-    console.log(options);
-    wx.getLocation({
-      success(res){
+    wx.chooseLocation({
+      success(res) {
         console.log(res);
-        //address = "上海普陀1";
-        that.setData({address:"上海普陀区1"});
-      },      
-      fail(res){
-        console.log(res);
-        //address = "上海普陀2";
-        that.setData({address:"上海普陀区2"});
+        that.setData({address:res.address+res.name});
       }
-    })
+    });
   }
 });

@@ -2,14 +2,16 @@
   "pages": [
     "pages/index/index",
     "pages/appointment/appointment",
+    "pages/serviceList/serviceList",
     "pages/about/about",
     "pages/priceList/priceList",
-    "pages/secondGood/secondGood"
+    "pages/secondGood/secondGood",
+    "pages/me/me"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#4ec4c8",
-    "navigationBarTitleText": "天天本地宝",
+    "navigationBarTitleText": "天天周边",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
@@ -25,25 +27,19 @@
         "selectedIconPath": "image/homeactive.png"
       },
       {
-        "pagePath": "pages/priceList/priceList",
-        "text": "价格列表",
-        "iconPath": "image/菜单价格列表.png",
-        "selectedIconPath": "image/菜单回收价格选中.png"
+        "pagePath": "pages/serviceList/serviceList",
+        "text": "服务列表",
+        "iconPath": "image/菜单服务列表.png",
+        "selectedIconPath": "image/菜单服务列表选中.png"
       },
       {
         "pagePath": "pages/secondGood/secondGood",
-        "text": "二手商品",
+        "text": "周边小店",
         "iconPath": "image/菜单二手商品.png",
         "selectedIconPath": "image/菜单二手商品选中.png"
       },
       {
-        "pagePath": "pages/appointment/appointment",
-        "text": "其他预约",
-        "iconPath": "image/菜单其他预约.png",
-        "selectedIconPath": "image/菜单其他预约选中.png"
-      },
-      {
-        "pagePath": "pages/appointment/appointment",
+        "pagePath": "pages/me/me",
         "text": "我的",
         "iconPath": "image/我的.png",
         "selectedIconPath": "image/我的选中.png"

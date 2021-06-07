@@ -9,7 +9,7 @@
 </swiper>
 <view class="app-title">功能菜单</view>
 <view class="plate">
-  <navigator url="/pages/appointment/appointment" open-type="switchTab" hover-class="other-navigator-hover" class="plate-item">
+  <navigator url="/pages/appointment/appointment" hover-class="navigator-hover" class="plate-item">
      <view class="plate-img">
        <image src="{{appointment}}"></image>
        </view>
@@ -17,38 +17,12 @@
         回收预约
        </text>
   </navigator>
-  <navigator appId="wx45b58b2f8dd3cb27" url="/pages/teacher/teacher" target='miniProgram' hover-class="navigator-hover" class="plate-item">
+  <navigator url="/pages/priceList/priceList" hover-class="navigator-hover" class="plate-item">
      <view class="plate-img">
-       <image src="{{minishop}}"></image>
+       <image src="{{priceList}}"></image>
        </view>
        <text class="plate-info">
         回收价格
-       </text>
-  </navigator>
-  <navigator url="/pages/appointment/appointment" open-type="switchTab" hover-class="other-navigator-hover" class="plate-item">
-     <view class="plate-img">
-       <image src="{{shopImg}}"></image>
-       </view>
-       <text class="plate-info">
-        二手商品
-       </text>
-  </navigator>
-  <navigator url="/pages/about/about" hover-class="navigator-hover" class="plate-item">
-     <view class="plate-img">
-       <image src="{{contactUs}}"></image>
-       </view>
-       <text class="plate-info">
-        联系我们
-       </text>
-  </navigator>
-</view>
-<view class="plate">
-  <navigator url="/pages/appointment/appointment" open-type="switchTab" hover-class="other-navigator-hover" class="plate-item">
-     <view class="plate-img">
-       <image src="{{appointment}}"></image>
-       </view>
-       <text class="plate-info">
-        回收预约
        </text>
   </navigator>
   <navigator appId="wx45b58b2f8dd3cb27" url="/pages/teacher/teacher" target='miniProgram' hover-class="navigator-hover" class="plate-item">
@@ -57,14 +31,6 @@
        </view>
        <text class="plate-info">
         精选商品
-       </text>
-  </navigator>
-  <navigator url="/pages/appointment/appointment" open-type="switchTab" hover-class="other-navigator-hover" class="plate-item">
-     <view class="plate-img">
-       <image src="{{shopImg}}"></image>
-       </view>
-       <text class="plate-info">
-        二手商品
        </text>
   </navigator>
   <navigator url="/pages/about/about" hover-class="navigator-hover" class="plate-item">

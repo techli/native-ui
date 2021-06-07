@@ -15,7 +15,7 @@ Page({
       {mySrc:'../../image/轮胎.png', myLabel:'橡胶轮胎'},
     ],
     appointment: '../../image/预约.png',
-    recycllist: '../../image/价格列表.png',
+    priceList: '../../image/回收价格.png',
     contactUs: '../../image/联系我们.png',
     shopImg: '../../image/二手商品.png',
     signupimg:'../../image/signup.png',
