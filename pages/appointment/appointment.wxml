@@ -2,6 +2,10 @@
     <form bindsubmit="formSubmit">
         <view class="form">
             <view class="input-group">
+                <label><text decode="true">&nbsp;</text>回收站名称</label>
+                <label><text decode="true">&nbsp;</text>李竹园回收站</label>
+            </view>
+            <view class="input-group">
                 <label><span>*</span>联系人</label>
                 <input type="text" name="name" maxlength= "8" placeholder="请输入您的姓名" />
             </view>

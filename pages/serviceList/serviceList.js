@@ -1,66 +1,50 @@
-// pages/serviceList/serviceList.js
-Page({
+const createRecycleContext = require('miniprogram-recycle-view')
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
+// fakeList
 
-  },
+const imgUrlList = [
+  'http://mmbiz.qpic.cn/sz_mmbiz_jpg/GEWVeJPFkSEV5QjxLDJaL6ibHLSZ02TIcve0ocPXrdTVqGGbqAmh5Mw9V7504dlEiatSvnyibibHCrVQO2GEYsJicPA/0?wx_fmt=jpeg',
+  'http://mmbiz.qpic.cn/sz_mmbiz_png/GEWVeJPFkSHALb0g5rCc4Jf5IqDfdwhWJ43I1IvriaV5uFr9fLAuv3uxHR7DQstbIxhNXFoQEcxGzWwzQUDBd6Q/0?wx_fmt=png',
+  'http://mmbiz.qpic.cn/sz_mmbiz_jpg/GEWVeJPFkSGqys4ibO2a8L9nnIgH0ibjNXfbicNbZQQYfxxUpmicQglAEYQ2btVXjOhY9gRtSTCxKvAlKFek7sRUFA/0?wx_fmt=jpeg',
+  'http://mmbiz.qpic.cn/sz_mmbiz_jpg/GEWVeJPFkSH2Eic4Lt0HkZeEN08pWXTticVRgyNGgBVHMJwMtRhmB0hE4m4alSuwsBk3uBBOhdCr91bZlSFbYhFg/0?wx_fmt=jpeg',
+  'http://mmbiz.qpic.cn/mmbiz_jpg/TcDuyasB5T3Eg34AYwjMw7xbEK2n01ekiaicPiaMInEMTkOQtuv1yke5KziaYF4MLia4IAbxlm0m5NxkibicFg4IZ92EA/0?wx_fmt=jpeg',
+]
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+const newList = new Array(5).fill(0)
+let count = 0;
+for (let i = 0; i < newList.length; i++) {
+  newList[i] = {
+    idx: i,
+    title: `李竹园回收站`,
+    image_url: imgUrlList[(count++)],
   }
+}
+
+const rpx2px = (rpx) => (rpx / 750) * wx.getSystemInfoSync().windowWidth
+Page({
+  onShareAppMessage() {
+    return {
+      title: 'recycle-view',
+      path: 'page/weui/example/recycle-view/recycle-view'
+    }
+  },
+  data: {
+    
+  },
+  onLoad(options) {
+
+  },
+  onReady() {
+    const ctx = createRecycleContext({
+      id: 'recycleId',
+      dataKey: 'recycleList',
+      page: this,
+      itemSize: {
+        height: rpx2px(200),
+        width: rpx2px(750)
+      }
+    })
+    ctx.append(newList)
+  },
+
 })

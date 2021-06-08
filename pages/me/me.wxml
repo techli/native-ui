@@ -1,3 +1,14 @@
-<view class="page-phone">
-这里是我的
+<view class="header">
+  <image class="avatar" src="{{woyaogujia}}"></image>
+  <text class="nickname">小辣椒张三</text>
+</view>
+
+<view class="content flex-row" style = "margin-top:70px;" bindtap="toOrderList" data-totab="我的预约">
+  <text>我的预约</text>
+</view>
+<view class="content flex-row" bindtap="toAddr">
+  <text>关于我们</text>
+</view>
+<view class="content flex-row" bindtap="toAddr">
+  <text>建议反馈</text>
 </view>

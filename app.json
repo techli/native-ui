@@ -5,7 +5,7 @@
     "pages/serviceList/serviceList",
     "pages/about/about",
     "pages/priceList/priceList",
-    "pages/secondGood/secondGood",
+    "pages/goodList/goodList",
     "pages/me/me"
   ],
   "window": {
@@ -33,10 +33,10 @@
         "selectedIconPath": "image/菜单服务列表选中.png"
       },
       {
-        "pagePath": "pages/secondGood/secondGood",
+        "pagePath": "pages/goodList/goodList",
         "text": "周边小店",
-        "iconPath": "image/菜单二手商品.png",
-        "selectedIconPath": "image/菜单二手商品选中.png"
+        "iconPath": "image/菜单小商店.png",
+        "selectedIconPath": "image/菜单小商店选中.png"
       },
       {
         "pagePath": "pages/me/me",

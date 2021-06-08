@@ -1,22 +1,21 @@
-/**me.wxss**/
 .header{
   width: 100%;
-  display:flex;
-  justify-content:center;
-  height: 200rpx;
+  height: 400rpx;
+  background: radial-gradient(#0dafed,#0185d0);
+  border-bottom: 25rpx solid #f3f3f3;
 }
 .avatar{
-  width: 160rpx;
-  height: 160rpx;
-  margin: 50rpx;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
   border-radius: 50%;
-  border: 1px solid #01DFD7;
+  border: 3px solid #66bbe9;
 }
 .nickname{
   position: absolute;
-  display:flex;
-  justify-content:center;
-  margin-top:120px;
+  left: 20rpx;
+  top: 20rpx;
+  color: white;
 }
 .level{
   color: white;

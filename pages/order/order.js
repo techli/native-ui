@@ -1,10 +1,9 @@
-//about.js
+
 //获取应用实例
 var app = getApp()
 Page({
   data: {
-    userInfo: {},
-    woyaogujia:'../../image/我要估价.png',
+    userInfo: {}
   },
   onLoad: function () {
     var that = this
