@@ -16,7 +16,6 @@ Page({
     ],
     appointment: '../../image/预约.png',
     priceList: '../../image/回收价格.png',
-    contactUs: '../../image/联系我们.png',
     shopImg: '../../image/二手商品.png',
     signupimg:'../../image/signup.png',
     woyaogujia:'../../image/我要估价.png',

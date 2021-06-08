@@ -6,6 +6,8 @@
     "pages/about/about",
     "pages/priceList/priceList",
     "pages/goodList/goodList",
+    "pages/problem/problem",
+    "pages/myAppointment/myAppointment",
     "pages/me/me"
   ],
   "window": {

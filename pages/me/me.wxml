@@ -1,14 +1,26 @@
-<view class="header">
-  <image class="avatar" src="{{woyaogujia}}"></image>
-  <text class="nickname">小辣椒张三</text>
-</view>
-
-<view class="content flex-row" style = "margin-top:70px;" bindtap="toOrderList" data-totab="我的预约">
-  <text>我的预约</text>
-</view>
-<view class="content flex-row" bindtap="toAddr">
-  <text>关于我们</text>
-</view>
-<view class="content flex-row" bindtap="toAddr">
-  <text>建议反馈</text>
+<view class="page">
+  <view class="header">
+    <image class="avatar" src="{{woyaogujia}}"></image>
+    <text class="nickname">小辣椒张三</text>
+  </view>
+  <view class="weui-form">
+    <view class="weui-form__control-area">
+      <view class="weui-cells__group weui-cells__group_form">
+        <view class="weui-cells">
+          <view class="weui-cell weui-cell_access" href="javascript:">
+            <view class="weui-cell__bd" bindtap="toMyAppointment"><p>我的预约</p></view>
+            <view class="weui-cell__ft"></view>
+          </view>
+          <view class="weui-cell weui-cell_access"  bindtap="toAboutUs">
+            <view class="weui-cell__bd"><p>关于我们</p></view>
+            <view class="weui-cell__ft"></view>
+          </view>
+          <view class="weui-cell weui-cell_access" bindtap="toProblemSubmit">
+            <view class="weui-cell__bd"><p>建议反馈</p></view>
+            <view class="weui-cell__ft"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>

@@ -1,16 +1,24 @@
-<recycle-view batch="{{batchSetRecycleData}}" id="recycleId">
-  <recycle-item wx:for="{{recycleList}}" wx:key="id" class="item">
-    <view class="item-content">
-      <image src="{{item.image_url}}" mode="aspectFit" style="height: 80px; width: 80px"></image>
-      <text style="margin-left:10px;">{{item.title}}</text>
-      <navigator url="/pages/appointment/appointment"  hover-class="navigator-hover">
-      <button size="mini" style="border-color: #ece9e9;font-size: 9pt !important; margin-top:10px;" plain = "true">点我预约</button>
-      </navigator>
+<view class="page">
+  <recycle-view batch="{{batchSetRecycleData}}" id="recycleId">
+    <recycle-item wx:for="{{recycleList}}" wx:key="id" class="item">
+      <view class="item-content">
+        <image src="{{item.image_url}}" mode="aspectFit" style="height: 80px; width: 80px"></image>
+        <text style="margin-left:10px;">{{item.title}}</text>
+        <navigator url="/pages/appointment/appointment"  hover-class="navigator-hover">
+        <button size="mini" style="border-color: #ece9e9;font-size: 9pt !important; margin-top:10px;" plain = "true">点我预约</button>
+        </navigator>
+      </view>
+    </recycle-item>
+    <view class="page__bd page__bd_spacing">
+      <view class="weui-footer">
+              <p class="weui-footer__links">
+                  <view href="javascript:" class="weui-footer__link">
+                    <navigator url="/pages/about/about">
+                    <text style="color:#3370CC;">欢迎加入我们</text>
+                  </navigator>
+                  </view>
+              </p>
+          </view>
     </view>
-  </recycle-item>
-  <view slot="after" style="text-align: center;margin-top:-20px">
-    <navigator url="/pages/about/about" style="height:40px; align-items: center;" hover-class="navigator-hover" class="plate-item">
-      <text style="color:#3370CC;">欢迎加入我们</text>
-    </navigator>
-  </view>
-</recycle-view>
+  </recycle-view>
+</view>

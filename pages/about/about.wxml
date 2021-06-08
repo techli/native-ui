@@ -1,7 +1,9 @@
 <view class="page-phone">
     <view class="header">
-      <view class="wx-title">天天周边</view>
-      <view class="wx-desc">周边服务，尽在掌中</view>
+      <view>
+         <view class="wx-title">天天周边</view>
+         <view class="wx-desc">周边服务，尽在掌中</view>
+      </view>
     </view>
 
     <view class="content">

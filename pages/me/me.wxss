@@ -14,26 +14,5 @@
 }
 .nickname{
   position: absolute;
-  display:flex;
-  justify-content:center;
   margin-top:120px;
-}
-.level{
-  color: white;
-  padding: 5rpx 40rpx;
-  border-radius: 20rpx;
-  background: rgba(0,0,0,0.4);
-  margin-top:-20rpx; 
-}
-.exp{
-  margin-top: 5rpx;
-  padding: 5rpx 80rpx;
-  background: rgba(0,0,0,0.6)
-}
-.content{
-  padding: 20rpx 0 20rpx 20rpx;
-  border-bottom: 1px solid #f3f3f3;
-}
-.sm-img{
-  margin-right: 10rpx;
 }

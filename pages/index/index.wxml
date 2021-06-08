@@ -33,14 +33,6 @@
         精选商品
        </text>
   </navigator>
-  <navigator url="/pages/about/about" hover-class="navigator-hover" class="plate-item">
-     <view class="plate-img">
-       <image src="{{contactUs}}"></image>
-       </view>
-       <text class="plate-info">
-        联系我们
-       </text>
-  </navigator>
 </view>
 <view class="clear"></view>
 <view class="appointment">

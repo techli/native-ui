@@ -5,6 +5,7 @@ Page({
   data: {
     userInfo: {},
     woyaogujia:'../../image/我要估价.png',
+    jtimg: '../../image/icon-jt.png',
   },
   onLoad: function () {
     var that = this
@@ -16,19 +17,20 @@ Page({
       })
     })
   },
-  toAddr: function () {
+
+  toProblemSubmit: function (el) {
     wx.navigateTo({
-      url: '../addrList/addrList'
+      url: '../problem/problem?toTab='+el.target.dataset.totab
     })
   },
-  toCoupon: function () {
+  toAboutUs: function (el) {
     wx.navigateTo({
-      url: '../coupon/coupon'
+      url: '../about/about?toTab='+el.target.dataset.totab
     })
   },
-  toOrderList: function (el) {
+  toMyAppointment: function (el) {
     wx.navigateTo({
-      url: '../orderList/orderList?toTab='+el.target.dataset.totab
+      url: '../myAppointment/myAppointment?toTab='+el.target.dataset.totab
     })
   }
 })

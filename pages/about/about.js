@@ -10,6 +10,7 @@ Page({
     phoneimg: '../../image/icon-phone.png',
     jtimg: '../../image/icon-jt.png',
     picimg: '../../image/icon-pic.png',
+    contactUs: '../../image/联系我们.png',
     imgalist: ['../../image/微信.png'],
     indicatorDots: false,
     autoplay: true,
