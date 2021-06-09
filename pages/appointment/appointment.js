@@ -4,12 +4,23 @@ var app = getApp()
 Page({
   data: {
     num:1,
-    minusStatus:'disable'
+    minusStatus:'disable',
+    phoneError: false
   },
   calling: function () {
     wx.makePhoneCall({
       phoneNumber: '15138244113', 
     })
+  },
+  checkPhone: function(e){
+    console.log(e);
+    if(!(/^1\d{10}$/.test(e.detail.value))){
+      console.log("aaaaa");
+      this.setData({phoneError:true});
+    }else{
+      console.log("bbbb");
+      this.setData({phoneError:false});
+    }
   },
   formSubmit: function(e){
     var errorMsg,nameError,phoneError,goodNameError,addressError;

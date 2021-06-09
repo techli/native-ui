@@ -12,47 +12,60 @@
                     已完成
                 </view>
             </view>
-            <view class="weui-tab__panel" style="margin-top:-100px;">
-                <view class="weui-form">
-                    <view class="weui-form__control-area">
-                    <view class="weui-cells__group weui-cells__group_form">
-                        <view class="weui-cells weui-cells_form">
-                        <view class="weui-cell weui-cell_active">
-                            <view class="weui-cell__hd"><label class="weui-label">回收站</label></view>
-                            <view class="weui-cell__bd">李竹园回收站</view>
-                        </view>
-                        <view class="weui-cell weui-cell_active">
-                            <view class="weui-cell__hd"><label class="weui-label">联系人</label></view>
-                            <view class="weui-cell__bd">李小华</view>
-                        </view>
-                        <view class="weui-cell weui-cell_active">
-                            <view class="weui-cell__hd"><label class="weui-label">电话号码</label></view>
-                            <view class="weui-cell__bd">15737501950</view>
-                        </view>
-                        <view class="weui-cell weui-cell_active">
-                            <view class="weui-cell__hd"><label class="weui-label">电话号码</label></view>
-                            <view class="weui-cell__bd">15737501950</view>
-                        </view>
-                        <view class="weui-cell weui-cell_active">
-                            <view class="weui-cell__hd"><label class="weui-label">电话号码</label></view>
-                            <view class="weui-cell__bd">15737501950</view>
-                        </view>
-                        <view class="weui-cell weui-cell_active">
-                            <view class="weui-cell__hd"><label class="weui-label">电话号码</label></view>
-                            <view class="weui-cell__bd">15737501950</view>
-                        </view>
-                        <view class="weui-cell weui-cell_active">
-                            <view class="weui-cell__hd"><label class="weui-label">电话号码</label></view>
-                            <view class="weui-cell__bd">15737501950</view>
-                        </view>
-                        </view>
-                    </view>
-                    </view>
-                    <view class="weui-form__opr-area">
-                    <view class="weui-btn weui-btn_primary weui-btn_disabled" href="javascript:" id="showTooltips">确定</view>
-                    </view>
+            <view class="weui-tab__panel">
+    <view class="page__bd">
+        <view class="weui-form-preview">
+            <view class="weui-form-preview__bd">
+                <view class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">站点名称</label>
+                    <span class="weui-form-preview__value">李竹园回收站</span>
                 </view>
+                <view class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">联系人</label>
+                    <span class="weui-form-preview__value">李小华</span>
+                </view>
+                <view class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">电话号码</label>
+                    <span class="weui-form-preview__value">15737501950</span>
+                </view>
+                <view class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">物品名称</label>
+                    <span class="weui-form-preview__value">洗衣机</span>
+                </view>
+                <view class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">物品数量</label>
+                    <span class="weui-form-preview__value">2台</span>
+                </view>
+                <view class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">上门地址</label>
+                    <span class="weui-form-preview__value">河南省周口市沈丘县白集镇李竹园行政村西头000号</span>
+                </view>
+                <view class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">备注</label>
+                    <span class="weui-form-preview__value">随着小程序应用的逐步广泛，与公众号之前的协同运营越来越重要，通过公众号的各个入口为小程序导流。</span>
+                </view>
+            </view>
+            <view class="weui-form-preview__ft">
+                <view id="showAndroidDialog1" 
+                bindtap="showAndroidDialog1"
+                class="weui-form-preview__btn weui-form-preview__btn_primary">操作</view>
             </view>
         </view>
     </view>
+            </view>
+        </view>
+    </view>
+    <div class="js_dialog" id="androidDialog1" wx:if="{{showDialog}}" >
+            <div class="weui-mask"></div>
+            <div class="weui-dialog weui-skin_android">
+                <div class="weui-dialog__hd"><strong class="weui-dialog__title">弹窗标题</strong></div>
+                <div class="weui-dialog__bd">
+                    弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内
+                </div>
+                <div class="weui-dialog__ft">
+                    <a href="javascript:" class="weui-dialog__btn weui-dialog__btn_default">辅助操作</a>
+                    <a href="javascript:" class="weui-dialog__btn weui-dialog__btn_primary">主操作</a>
+                </div>
+            </div>
+        </div>
 </view>
