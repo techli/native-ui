@@ -61,5 +61,7 @@
     "scope.userLocation": {
     "desc": "你的位置信息将用于帮助回收人员联系你"
     }
+  },
+  "usingComponents": {
   }
 }

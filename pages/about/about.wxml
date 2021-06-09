@@ -1,59 +1,35 @@
 <view class="page-phone">
     <view class="header">
-      <view>
-         <view class="wx-title">天天周边</view>
-         <view class="wx-desc">周边服务，尽在掌中</view>
-      </view>
+         <view class="weui-flex">
+            <view class="weui-flex__item">
+               <view class="placeholder">
+                  <view>
+                     <view class="wx-title">天天周边</view>
+                     <view class="wx-desc">周边服务，尽在掌中</view>
+                  </view>
+               </view>
+            </view>
+            <view class="weui-flex__item">
+               <view class="placeholder">
+                  <image src="{{logosrc}}" style="width:100px;height:100px;margin-top:-25px;"/>
+               </view>
+            </view>
+        </view>
     </view>
-
-    <view class="content">
-      <view class="wx-cell">
-         <view class="icon">
-            <image src="{{adrimg}}" class="icon-postion"></image>
-         </view>
-         <view class="cell-bd" bindtap="getLocation">沈丘县白集镇李竹园村</view>
-         <view class="cell-fd">
-            <image src="{{jtimg}}" class="icon-postion"></image>
-         </view>
+    <view class="weui-panel weui-panel_access" style="margin-top:-20px;">
+      <view class="weui-panel__bd">
+            <view class="weui-media-box weui-media-box_text">
+               <h4 class="weui-media-box__title">我们是谁</h4>
+               <p class="weui-media-box__desc">几个不甘寂寞的程序员</p>
+            </view>
+            <view class="weui-media-box weui-media-box_text">
+               <h4 class="weui-media-box__title">我们的目标</h4>
+               <p class="weui-media-box__desc">为您提供一个周边综合服务的门户平台，让周边的人能看到您的服务和商品</p>
+            </view>
+            <view class="weui-media-box weui-media-box_text">
+               <h4 class="weui-media-box__title">如何加入</h4>
+               <p class="weui-media-box__desc">点击本行扫码添加微信</p>
+            </view>
       </view>
-
-      <view class="wx-cell">
-         <view class="icon">
-            <image src="{{clockimg}}" class="icon-postion"></image>
-         </view>
-         <view class="cell-bd">9：00 - 18：00</view>
-      </view>
-
-      <view class="wx-cell">
-         <view class="icon" >
-            <image src="{{comment}}" class="icon-postion"></image>
-         </view>
-         <view class="cell-bd" bindtap="preViewWX">微信号</view>
-         <view class="cell-fd">
-           <image src="{{jtimg}}" class="icon-postion"></image>
-         </view>
-      </view>
-
-      <view class="wx-cell" bindtap="calling">
-         <view class="icon">
-            <image src="{{phoneimg}}" class="icon-postion"></image>
-         </view>
-         <view class="cell-bd">151 3824 4113</view>
-         <view class="cell-fd">
-           <image src="{{jtimg}}" class="icon-postion"></image>
-         </view>
-      </view>
-
-    </view>
-
-    <view class="content">
-      <form bindsubmit="submit">
-         <view class="section">
-         <textarea placeholder="期待您的反馈"   focus="{{focus}}" />
-         <view class="btn-area">
-            <button form-type="submit"  bindtap="bindButtonTap">提交</button>
-         </view>
-         </view>
-         </form>
-    </view>
+   </view>    
 </view>

@@ -3,7 +3,7 @@
 var app = getApp()
 Page({
   data: {
-    logosrc:'../../image/logo.png',
+    logosrc:'../../image/天天周边.png',
     adrimg:'../../image/icon-address.png',
     clockimg: '../../image/icon-clock.png',
     comment: '../../image/聊天.png',
