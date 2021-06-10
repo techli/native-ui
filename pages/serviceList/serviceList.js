@@ -29,7 +29,7 @@ Page({
     }
   },
   data: {
-    
+    woyaogujia:'../../image/回收价格.png'
   },
   onLoad(options) {
 

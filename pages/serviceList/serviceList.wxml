@@ -1,15 +1,32 @@
 <view class="page">
-  <recycle-view batch="{{batchSetRecycleData}}" id="recycleId">
-    <recycle-item wx:for="{{recycleList}}" wx:key="id" class="item">
-      <view class="item-content">
-        <image src="{{item.image_url}}" mode="aspectFit" style="height: 80px; width: 80px"></image>
-        <text style="margin-left:10px;">{{item.title}}</text>
-        <navigator url="/pages/appointment/appointment"  hover-class="navigator-hover">
-        <button size="mini" style="border-color: #ece9e9;font-size: 9pt !important; margin-top:10px;" plain = "true">点我预约</button>
-        </navigator>
-      </view>
-    </recycle-item>
-    <view class="page__bd page__bd_spacing">
+  <view class="page__bd">
+        <view class="weui-panel weui-panel_access">
+            <view class="weui-panel__bd weui-flex">
+              <view class="weui-flex__item">
+              <a href="javascript:" class="weui-media-box weui-media-box_appmsg">
+                    <view class="weui-media-box__hd">
+                        <image class="weui-media-box__thumb" src="{{woyaogujia}}" />
+                    </view>
+                    <view class="weui-media-box__bd">
+                        <h4 class="weui-media-box__title">李竹园回收站</h4>
+                        <p class="weui-media-box__desc">回收各种废旧二手电器</p>
+                    </view>
+                </a>
+                </view>
+                <view class="weui-flex__item" class="placeholder">
+                  <view >
+                    <navigator url="/pages/appointment/appointment"     hover-class="navigator-hover">
+                    <button size="mini" style="border-color: #ece9e9;font-size: 9pt !important; margin-top:10px;margin-right:10px;" plain = "true">回收预约</button>
+                    </navigator>
+                  <navigator url="/pages/priceList/priceList"     hover-class="navigator-hover">
+                  <button size="mini" style="border-color: #ece9e9;font-size: 9pt !important; margin-top:10px;margin-right:10px;" plain = "true">回收价格</button>
+                  </navigator>
+                  </view>
+                </view>
+            </view>
+        </view>
+  </view>
+  <view class="page__bd page__bd_spacing" style="margin-top:20px;">
       <view class="weui-footer">
               <p class="weui-footer__links">
                   <view href="javascript:" class="weui-footer__link">
@@ -20,5 +37,4 @@
               </p>
           </view>
     </view>
-  </recycle-view>
 </view>
