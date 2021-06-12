@@ -3,9 +3,7 @@
 var app = getApp()
 Page({
   data: {
-    userInfo: {},
-    woyaogujia:'../../image/我要估价.png',
-    jtimg: '../../image/icon-jt.png',
+    userInfo: {}
   },
   onLoad: function () {
     var that = this

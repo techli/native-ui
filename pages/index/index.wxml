@@ -1,9 +1,9 @@
 <!--index.wxml-->
 <swiper indicator-dots="{{indicatorDots}}"
   autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{imgUrls}}"  wx:key="unique" wx:for-item="item">
+    <block wx:for="{{galleryList}}"  wx:key="unique" wx:for-item="item">
       <swiper-item>
-        <image src="{{item}}" class="slide-image"/>
+        <image src="{{imageUrlPre+item.path}}" class="slide-image"/>
       </swiper-item>
     </block>
 </swiper>
@@ -38,12 +38,12 @@
 <view class="appointment">
  <view class="app-title">回收物品</view>
   <view class="app-moduler">
-    <view class="mod-item" wx:for="{{myList}}" wx:key="unique" id="{{index}}">
+    <view class="mod-item" wx:for="{{recycleList}}" wx:key="unique" id="{{index}}">
       <view class="mod-img">
-        <image src="{{item.mySrc}}" class="mod-image"></image>
+        <image src="{{imageUrlPre+item.path}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-         <text>{{item.myLabel}}</text>  
+         <text>{{item.label}}</text>  
       </view>
     </view>
   </view>

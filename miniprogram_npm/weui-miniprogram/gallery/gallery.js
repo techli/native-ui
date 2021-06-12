@@ -98,7 +98,7 @@ Component({
     addGlobalClass: true
   },
   properties: {
-    imgUrls: {
+    galleryList: {
       type: Array,
       value: [],
 
@@ -138,7 +138,7 @@ Component({
   ready() {
     const data = this.data;
     this.setData({
-      currentImgs: data.imgUrls
+      currentImgs: data.galleryList
     });
   },
 

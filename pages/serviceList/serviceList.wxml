@@ -3,25 +3,23 @@
         <view class="weui-panel weui-panel_access">
             <view class="weui-panel__bd weui-flex">
               <view class="weui-flex__item">
-              <a href="javascript:" class="weui-media-box weui-media-box_appmsg">
+              <navigator hover-class="navigator-hover" url="/pages/service/service"  class="weui-media-box weui-media-box_appmsg">
                     <view class="weui-media-box__hd">
                         <image class="weui-media-box__thumb" src="{{woyaogujia}}" />
                     </view>
                     <view class="weui-media-box__bd">
                         <h4 class="weui-media-box__title">李竹园回收站</h4>
-                        <p class="weui-media-box__desc">回收各种废旧二手电器</p>
+                        <p class="weui-media-box__desc">回收各种废旧二手电器</p> 
                     </view>
-                </a>
+                </navigator>
                 </view>
                 <view class="weui-flex__item" class="placeholder">
-                  <view >
                     <navigator url="/pages/appointment/appointment"     hover-class="navigator-hover">
                     <button size="mini" style="border-color: #ece9e9;font-size: 9pt !important; margin-top:10px;margin-right:10px;" plain = "true">回收预约</button>
                     </navigator>
                   <navigator url="/pages/priceList/priceList"     hover-class="navigator-hover">
                   <button size="mini" style="border-color: #ece9e9;font-size: 9pt !important; margin-top:10px;margin-right:10px;" plain = "true">回收价格</button>
                   </navigator>
-                  </view>
                 </view>
             </view>
         </view>

@@ -8,7 +8,6 @@ Page({
     clockimg: '../../image/icon-clock.png',
     comment: '../../image/聊天.png',
     phoneimg: '../../image/icon-phone.png',
-    jtimg: '../../image/icon-jt.png',
     contactUs: '../../image/联系我们.png',
     imgalist: ['../../image/微信.png'],
     indicatorDots: false,
