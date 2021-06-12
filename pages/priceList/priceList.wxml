@@ -1,21 +1,16 @@
-<!--pages/priceList/priceList.wxml-->
-<view class="clear"></view>
-<view class='warp'>
-  <view class='list'>
-    <view class='style {{item.id==num?"active":""}}' catchtap='clickList' 
-      wx:for="{{message}}" wx:key="unique" id="{{index}}">
-      {{item.text}}
-    </view>
-  </view>
-  <view class='content'>
-    <view class="mod-item" wx:for="{{content1}}" wx:key="unique" id="{{index}}">
-      <view class="mod-img">
-        <image src="{{item.mySrc}}" class="mod-image"></image>
-      </view>
-      <view class="mod-title">
-         <text>{{item.myLabel}}</text>
-         <text>价格区间：{{item.myRange}}</text>  
-      </view>
-    </view>
+<view class="page">
+  <view class="page__bd">
+        <view class="weui-panel weui-panel_access">
+            <view class="weui-panel__bd" wx:for="{{recycleList}}" wx:key="unique" id="{{index}}">
+                <view class="weui-media-box weui-media-box_appmsg" style="margin:-15px;">
+                      <view class="weui-media-box__hd">
+                          <image class="weui-media-box__thumb" src="{{imageUrlPre+item.path}}" />
+                      </view>
+                      <view class="weui-media-box__bd">
+                          <h4 class="weui-media-box__title">{{item.label}} <text decode='true'>&nbsp;&nbsp;&nbsp;{{item.price}}</text></h4>
+                      </view>
+                  </view>
+            </view>
+        </view>
   </view>
 </view>
