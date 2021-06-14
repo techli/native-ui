@@ -1,7 +1,7 @@
 //app.js
 App({
   imageUrlPre: "http://47.101.151.58:8080/image/",
-  nativeUrlPre: "http://127.0.0.1:8080/",
+  nativeUrlPre: "http://47.101.151.58:8080/native-api/",
   openId: '',
   onLaunch: function () {
     //调用API从本地缓存中获取数据

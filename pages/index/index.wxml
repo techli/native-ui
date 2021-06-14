@@ -25,7 +25,7 @@
         回收价格
        </text>
   </navigator>
-  <navigator appId="wx45b58b2f8dd3cb27" url="/pages/teacher/teacher" target='miniProgram' hover-class="navigator-hover" class="plate-item">
+  <navigator appId="wx547f7251ac3ff9f9" target='miniProgram' hover-class="navigator-hover" class="plate-item">
      <view class="plate-img">
        <image src="{{minishop}}"></image>
        </view>

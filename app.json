@@ -38,12 +38,6 @@
         "selectedIconPath": "image/菜单服务列表选中.png"
       },
       {
-        "pagePath": "pages/productList/productList",
-        "text": "周边小店",
-        "iconPath": "image/菜单小商店.png",
-        "selectedIconPath": "image/菜单小商店选中.png"
-      },
-      {
         "pagePath": "pages/me/me",
         "text": "我的",
         "iconPath": "image/我的.png",

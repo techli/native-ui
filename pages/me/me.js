@@ -3,6 +3,7 @@
 var app = getApp()
 Page({
   data: {
+    touxiang: '../../image/头像.png',
     userInfo: {}
   },
   onLoad: function () {
