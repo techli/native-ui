@@ -53,7 +53,7 @@
                             </view>
                         </view>
                         <view
-                            wx:if="{{(item.openId==openId && item.status=='PENDING')||(item.handleOpenId==openId && !item.auditStatus)}}"
+                            wx:if="{{(item.openId==openId && item.status=='PENDING')||(item.handleOpenId==openId && item.status!='FINISHED')}}"
                             class="weui-form-preview__ft">
                             <view id="showAndroidDialog1" data-lockerid="{{item}}" bindtap="showAndroidDialog1"
                                 class="weui-form-preview__btn weui-form-preview__btn_primary">操作</view>
@@ -66,24 +66,29 @@
             </view>
         </view>
     </view>
-    <view class="js_dialog" id="androidDialog1" wx:if="{{showDialog}}">
+    <view class="js_dialog" id="androidDialog1" wx:if="{{showDialog}}" catchtap="colseDialog">
         <view class="weui-mask"></view>
             <view class="weui-dialog weui-skin_android">
                 <view class="weui-dialog__hd"><strong class="weui-dialog__title">操作</strong></view>
-                <view class="weui-dialog__bd">
-                    <input bindblur="reasonBlur" type="text" name="reason" maxlength="64" placeholder="请输入描述" />
-                </view>
-                <view class="weui-dialog__ft">
-                    <button formType="submit" bindtap="handleApply" data-lockerid="CANCLE"
+                <view class="weui-dialog__ft" >
+                    <button formType="submit" bindtap="handleApply" 
+                    style="margin-left:10px;"
+                    data-lockerid="CANCLE"
                         wx:if="{{item.openId==openId && item.status=='PENDING'}}"
                         class="weui-dialog__btn weui-dialog__btn_primary">取消</button>
-                    <button formType="submit" bindtap="handleApply" data-lockerid="REJECT"
+                    <button formType="submit" bindtap="handleApply" 
+                    style="margin-left:10px;"
+                    data-lockerid="REJECT"
                         wx:if="{{(item.handleOpenId==openId && !item.auditStatus)}}"
                         class="weui-dialog__btn weui-dialog__btn_default">拒绝</button>
-                    <button formType="submit" bindtap="handleApply" data-lockerid="ACCEPT"
+                    <button formType="submit" bindtap="handleApply" 
+                    style="margin-left:10px;"
+                    data-lockerid="ACCEPT"
                         wx:if="{{(item.handleOpenId==openId && !item.auditStatus)}}"
                         class="weui-dialog__btn weui-dialog__btn_primary">接受</button>
-                    <button formType="submit" bindtap="handleApply" data-lockerid="FINISHED"
+                    <button formType="submit" bindtap="handleApply" 
+                    style="margin-left:10px;"
+                    data-lockerid="FINISHED"
                         wx:if="{{(item.handleOpenId==openId && item.auditStatus=='ACCEPT')}}"
                         class="weui-dialog__btn weui-dialog__btn_primary">完成</button>
                 </view>

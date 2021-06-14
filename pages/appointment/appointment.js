@@ -12,15 +12,13 @@ Page({
   },
 
   formSubmit: function(e){
-    
     let value = {...e.detail.value};
     var name=value.name.trim(),
     phone=value.phone.trim(),
     goodName =value.goodName.trim(),
     goodQuantity =value.goodQuantity.trim(),
     address =value.address.trim(),
-    remark =value.remark.trim(),
-    openId = app.openId;
+    remark =value.remark.trim();
 
     var errorMsg;
     if(!name||name.length ==0){
@@ -43,9 +41,8 @@ Page({
       })
     }
     var data = {
-      "openId": openId,
+      "openId": app.openId,
       "serviceId":value.serviceId,
-      "serviceName":value.serviceName,
       "name":name,
       "phone":phone,
       "goodName":goodName,
@@ -53,9 +50,10 @@ Page({
       "address":address,
       "remark":remark
     }
-    that.submitAppointment(data);
+    console.log(data);
+    this.submitAppointment(data);
   },
-
+  
   submitAppointment: function(data){
     wx.request({
       url: app.nativeUrlPre+'appointment/createApply',
