@@ -1,12 +1,13 @@
 <view class="page">
   <view class="weui-form">
+    <form bindsubmit="submitProblem">
     <view class="weui-form__control-area">
       <view class="weui-cells__group weui-cells__group_form">
         <view class="weui-cells__title">问题描述</view>
         <view class="weui-cells weui-cells_form">
             <view class="weui-cell ">
                 <view class="weui-cell__bd">
-                    <textarea class="weui-textarea" placeholder="请描述你所发生的问题" rows="3"></textarea>
+                    <textarea name = "content" class="weui-textarea" placeholder="请描述你所发生的问题" rows="3" maxlength="255"></textarea>
                     <view class="weui-textarea-counter"><span>0</span>/200</view>
                 </view>
             </view>
@@ -14,7 +15,8 @@
       </view>
     </view>
     <view class="weui-form__opr-area">
-      <view class="weui-btn weui-btn_primary" id="showTooltips">确定</view>
+      <button class="weui-btn" type="primary" formType="submit">确定</button>
     </view>
+    </form>
   </view>
 </view>

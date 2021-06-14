@@ -8,6 +8,8 @@
             <view class="weui-cell__hd"><label class="weui-label">站点</label></view>
             <view class="weui-cell__bd weui-flex">
                 李竹园回收站
+                <input name="serviceId" hidden value="1" />
+                <input name="serviceName" hidden value="李竹园回收站" />
             </view>
           </view>
           <view class="weui-cell weui-cell_active">

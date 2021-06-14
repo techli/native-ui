@@ -1,0 +1,19 @@
+<view class="page">
+    <view class="weui-msg">
+        <view wx:if="{{result}}" class="weui-msg__icon-area"><i class="weui-icon-success weui-icon_msg"></i></view>
+        <view class="weui-msg__text-area">
+            <h2 class="weui-msg__title">{{result?"操作成功":"操作失败"}}</h2>
+        </view>
+        <view class="weui-msg__text-area">
+          <p class="weui-msg__desc">
+            {{message}}
+            <view href="javascript:" wx:if="{{url}}" class="weui-msg__opr-area">
+            <navigator url="{{url}}"><text style="color:#3370CC;">去查看</text></navigator>
+            </view>
+          </p>
+        </view>
+        <view class="weui-msg__opr-area">
+            <navigator url="/pages/index/index" open-type="switchTab" hover-class="navigator-hover" class="weui-btn weui-btn_primary">返回首页</navigator>
+        </view>
+    </view>
+</view>

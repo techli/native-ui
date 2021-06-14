@@ -26,7 +26,7 @@
                <h4 class="weui-media-box__title">我们的目标</h4>
                <p class="weui-media-box__desc">为您提供一个周边综合服务的门户平台，让周边的人能看到您的服务和商品</p>
             </view>
-            <view class="weui-media-box weui-media-box_text">
+            <view class="weui-media-box weui-media-box_text" bindtap="preViewWX">
                <h4 class="weui-media-box__title">如何加入</h4>
                <p class="weui-media-box__desc">点击本行扫码添加微信</p>
             </view>

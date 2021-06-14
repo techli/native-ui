@@ -9,9 +9,11 @@
     "pages/problem/problem",
     "pages/myAppointment/myAppointment",
     "pages/service/service",
-    "pages/me/me"
+    "pages/me/me",
+    "pages/result/result"
   ],
   "window": {
+    "enablePullDownRefresh": true,
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#4ec4c8",
     "navigationBarTitleText": "天天周边",

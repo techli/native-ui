@@ -19,7 +19,8 @@ Page({
     goodName =value.goodName.trim(),
     goodQuantity =value.goodQuantity.trim(),
     address =value.address.trim(),
-    remark =value.remark.trim();
+    remark =value.remark.trim(),
+    openId = app.openId;
 
     var errorMsg;
     if(!name||name.length ==0){
@@ -41,7 +42,40 @@ Page({
         duration: 2000//持续的时间
       })
     }
+    var data = {
+      "openId": openId,
+      "serviceId":value.serviceId,
+      "serviceName":value.serviceName,
+      "name":name,
+      "phone":phone,
+      "goodName":goodName,
+      "goodQuantity":goodQuantity,
+      "address":address,
+      "remark":remark
+    }
+    that.submitAppointment(data);
   },
+
+  submitAppointment: function(data){
+    wx.request({
+      url: app.nativeUrlPre+'appointment/createApply',
+      method: 'post',
+      data: data,
+      success: function(res){
+        wx.navigateTo({
+          url: '../result/result?result=true&url=/pages/myAppointment/myAppointment&message=预约结果到“我的->我的预约”中查看',
+        })
+      },
+      fail: function(res){
+        wx.showToast({
+          title: '系统错误，请稍后重试！',
+          icon: 'none',
+          duration: 2000//持续的时间
+        })
+      }
+    })
+  },
+
   getUserLocation: function (options){
     var that = this;
     wx.chooseLocation({
