@@ -5,12 +5,12 @@
     "pages/serviceList/serviceList",
     "pages/about/about",
     "pages/priceList/priceList",
-    "pages/goodList/goodList",
     "pages/problem/problem",
     "pages/myAppointment/myAppointment",
     "pages/service/service",
     "pages/me/me",
-    "pages/result/result"
+    "pages/result/result",
+    "pages/productList/productList"
   ],
   "window": {
     "enablePullDownRefresh": true,
@@ -38,7 +38,7 @@
         "selectedIconPath": "image/菜单服务列表选中.png"
       },
       {
-        "pagePath": "pages/goodList/goodList",
+        "pagePath": "pages/productList/productList",
         "text": "周边小店",
         "iconPath": "image/菜单小商店.png",
         "selectedIconPath": "image/菜单小商店选中.png"
