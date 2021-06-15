@@ -1,5 +1,6 @@
 //action.js
 //获取应用实例
+import appUtil from '../../utils/utils.js';
 var app = getApp()
 Page({
   data:{

@@ -19,8 +19,6 @@ App({
               code: res.code
             },
             success: function(res){
-              console.log(res);
-              console.log(that);
               that.openId = res.data;
             }
           })

@@ -50,7 +50,6 @@ Page({
       "address":address,
       "remark":remark
     }
-    console.log(data);
     this.submitAppointment(data);
   },
   
@@ -78,7 +77,6 @@ Page({
     var that = this;
     wx.chooseLocation({
       success(res) {
-        console.log(res);
         that.setData({address:res.address+res.name});
       }
     });

@@ -12,7 +12,6 @@ Page({
   },
   preViewWX: function () {
     var that = this;
-    console.log(that.data.wxImage);
     wx.previewImage({
       current : that.data.wxImage,
       urls : [that.data.wxImage]

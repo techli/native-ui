@@ -31,16 +31,13 @@ CustomPage({
       url: app.nativeUrlPre+"product/listProduct?pageNum="+this.data.pageNum+"&pageSize="+this.data.pageSize+"&categoryId="+this.data.vtabs[index].catId,
       method: 'get',
       success: function(res){
-        console.log(res);
         that.setData({ productList: res.data.productList});
-        console.log(that.data.productList);
       }
     })
   },
 
   onChange(e) {
     const index = e.detail.index
-    console.log('change', index)
   },
   handleClick() {
     wx.navigateTo({
