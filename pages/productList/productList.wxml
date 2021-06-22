@@ -1,26 +1,3 @@
-<view class="page" data-weui-theme="{{theme}}">
-
-<mp-vtabs 
-  vtabs="{{vtabs}}" 
-  activeTab="{{activeTab}}" 
-  bindtabclick="onTabClick"
-  bindchange="onChange"
-  class="test"
->
-  <block wx:for="{{productList}}" wx:key="title" >
-    <mp-vtabs-content tabIndex="{{index}}">
-      <view class="vtabs-content-item" style="margin-bottom: {{vtabs.length - 1 === index ? 600 : 0}}px;" bindtap="handleClick">
-        <image src="{{item.product.info.headImg[0]}}" mode="widthFix"></image>
-        <view class="item-title">
-          {{item.product.info.title}}
-        </view>
-        <view class="item-desc">
-          {{item.product.info.subTitle}}
-        </view>
-      </view>
-    </mp-vtabs-content>
-  </block>
-  <view style="height: 1px;width: 100%"></view>
-
-</mp-vtabs>
+<view>
+  <web-view src="https://p.pinduoduo.com/SY1Tix1F"></web-view>
 </view>

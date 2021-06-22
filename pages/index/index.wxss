@@ -3,6 +3,12 @@
   width:100%;
   height:300rpx;
 }
+.home-page {
+  height: 160rpx;
+  width: 100%;
+  border: 1rpx solid red;
+  font-size: 60rpx;
+}
 
 .plate{
   height:240rpx;

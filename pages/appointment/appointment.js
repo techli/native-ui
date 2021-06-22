@@ -3,14 +3,21 @@
 var app = getApp()
 Page({
   data: {
-    phoneError: false
+    phoneError: false,
+    openId: ''
+  },
+  onLoad: function(){
+    if(app.getUserOpenId.length==0){
+      app.getUserOpenId().then(res=>{
+        this.setData({openId,res});
+      })
+    }
   },
   calling: function () {
     wx.makePhoneCall({
       phoneNumber: '15138244113', 
     })
   },
-
   formSubmit: function(e){
     let value = {...e.detail.value};
     var name=value.name.trim(),
@@ -40,8 +47,11 @@ Page({
         duration: 2000//持续的时间
       })
     }
+    this.getUserOpenId().then(res=>{
+      that.globalData.openId = res;
+    })
     var data = {
-      "openId": app.openId,
+      "openId": this.data.openId,
       "serviceId":value.serviceId,
       "name":name,
       "phone":phone,

@@ -1,3 +1,4 @@
+<!-- <nav-bar navbar-data='{{navbarData}}'></nav-bar> -->
 <view class="page">
   <view class="header">
     <image class="avatar" src="{{touxiang}}"></image>

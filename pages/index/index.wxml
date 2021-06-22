@@ -1,4 +1,4 @@
-<!--index.wxml-->
+<!-- <nav-bar navbar-data='{{navbarData}}'></nav-bar> -->
 <swiper indicator-dots="{{indicatorDots}}"
   autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{galleryList}}"  wx:key="unique" wx:for-item="item">

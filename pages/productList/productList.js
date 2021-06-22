@@ -17,11 +17,14 @@ CustomPage({
   onLoad() {
     var that = this;
     wx.request({
-      url: app.nativeUrlPre+"product/listProductCats",
-      success: function(res){
-        that.setData({ vtabs: res.data.productCats });
-      }
+      url: 'https://p.pinduoduo.com/SY1Tix1F',
     })
+    // wx.request({
+    //   url: app.nativeUrlPre+"product/listProductCats",
+    //   success: function(res){
+    //     that.setData({ vtabs: res.data.productCats });
+    //   }
+    // })
   },
 
   onTabClick(e) {

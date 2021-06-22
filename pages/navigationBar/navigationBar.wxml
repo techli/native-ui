@@ -1,0 +1,9 @@
+<view class='nav-wrap' style='height: {{height*2 + 50}}px;'>
+  <view class='nav-title'>{{navbarData.title}}</view>
+  <view wx:if="{{navbarData.isIndex}}" style='display: flex; justify-content: space-around;flex-direction: column'>
+    <view bindtap='_reloadAddress' class='nav-capsule' style='height: {{height*2 + 60}}px;'>
+        <image src='../../image/定位.png' mode='aspectFill' class='back-home'></image>
+      <p style="font-size:13px;">{{navbarData.address}}</p>
+    </view>
+  </view>
+</view> 
