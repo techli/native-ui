@@ -1,7 +1,7 @@
 //app.js
 App({
   imageUrlPre: "https://www.techli.top/images/",
-  nativeUrlPre: "https://www.techli.top/native-api/",
+  nativeUrlPre: "https://www.techli.top:8443/native-api/",
   onLaunch: function () {
     var that = this;
      this.getUserAddress().then(res=>{
@@ -20,7 +20,7 @@ App({
         success (res) {
           var locationString = res.latitude + "," + res.longitude;
           wx.request({
-            url: 'http://127.0.0.1:8080/address/currentAddress',
+            url: 'https://www.techli.top:8443/native-api/address/currentAddress',
             method: 'GET',
             success: function (res) {
               //输出一下位置信息
