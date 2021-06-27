@@ -47,11 +47,11 @@
 }
 
 .mod-item{
- width:30%;
+ width:45%;
  height:300rpx;
  float: left;
  margin-left:20rpx;
- margin-top:40rpx;
+ margin-top:0rpx;
  position: relative;
 }
 .mod-signup{
@@ -73,8 +73,8 @@
   font-size:32rpx;
   font-family: '微软雅黑';
   display:flex;
-  height:45rpx;
-  margin-top:15rpx;
+  height:60rpx;
+  margin-top:0rpx;
   flex-direction:column;
   justify-content: center;
   text-overflow: -o-ellipsis-lastline;
@@ -127,10 +127,7 @@
   right:0rpx;
   top:18rpx;
 }
-.iconjtimg{
-  width:60rpx;
-  height:60rpx;
-}
+
 .clear{
   display: flex;
   flex-direction: column;

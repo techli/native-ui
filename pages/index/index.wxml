@@ -1,4 +1,3 @@
-<!-- <nav-bar navbar-data='{{navbarData}}'></nav-bar> -->
 <swiper indicator-dots="{{indicatorDots}}"
   autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{galleryList}}"  wx:key="unique" wx:for-item="item">
@@ -36,14 +35,14 @@
 </view>
 <view class="clear"></view>
 <view class="appointment">
- <view class="app-title">回收物品</view>
+ <view class="app-title">热卖商品</view>
   <view class="app-moduler">
-    <view class="mod-item" wx:for="{{recycleList}}" wx:key="unique" id="{{index}}">
-      <view class="mod-img">
-        <image src="{{imageUrlPre+item.path}}" class="mod-image"></image>
+    <view class="mod-item" wx:for="{{productList}}" wx:key="unique" id="{{index}}">
+      <view bindtap="gotoShopUrl" data-lockerid="{{item}}"  class="mod-img">
+        <image src="{{item.product.info.headImg[0]}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-         <text>{{item.label}}</text>  
+         <text>{{item.product.info.title}}</text>  
       </view>
     </view>
   </view>

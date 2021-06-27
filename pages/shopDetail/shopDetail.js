@@ -20,6 +20,10 @@ CustomPage({
   },
 
   onLoad(options) {
+    this.setData({appId: options.appId});
+    wx.setNavigationBarTitle({
+      title:  options.name
+    });
     var that = this;
     wx.request({
       url: app.nativeUrlPre+"product/listProductCats",
@@ -28,7 +32,7 @@ CustomPage({
       }
     });    
     wx.request({
-      url: app.nativeUrlPre+"product/listProduct?pageNum="+that.data.pageNum+"&index=0",
+      url: app.nativeUrlPre+"product/listProduct?pageNum="+that.data.pageNum+"&index=0&appId="+options.appId,
       success: function(res){
         that.setData({ productList: res.data.productList });
       }
@@ -41,7 +45,7 @@ CustomPage({
     this.setData({pageNum: this.data.pageNum+1});
     var that = this;
     wx.request({
-      url: app.nativeUrlPre+"product/listProduct?pageNum="+that.data.pageNum+"&index="+this.data.index,
+      url: app.nativeUrlPre+"product/listProduct?pageNum="+that.data.pageNum+"&index="+this.data.index+"&appId="+this.data.appId,
       success: function(res){
         that.setData({rowCount: that.data.total});
         that.setData({productList: that.data.productList.concat(res.data.productList)});
@@ -64,9 +68,8 @@ CustomPage({
     const index = e.detail.index;
     this.setData({index: index});
     var that = this;
-
     wx.request({
-      url: app.nativeUrlPre+"product/listProduct?pageNum="+that.data.pageNum+"&index="+index,
+      url: app.nativeUrlPre+"product/listProduct?pageNum="+that.data.pageNum+"&index="+index+"&appId="+this.data.appId,
       success: function(res){
         that.setData({rowCount: that.data.total});
         that.setData({productList: res.data.productList});

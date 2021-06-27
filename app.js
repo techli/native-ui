@@ -1,12 +1,12 @@
 //app.js
 App({
-  imageUrlPre: "https://www.techli.top:8443/image/",
-  nativeUrlPre: "https://www.techli.top:8443/native-api/",
+  imageUrlPre: "https://www.techli.top/images/",
+  nativeUrlPre: "https://www.techli.top/native-api/",
   onLaunch: function () {
     var that = this;
-    this.getUserAddress().then(res=>{
-      that.globalData.address = res.result.address_reference.business_area.title;
-    });
+     this.getUserAddress().then(res=>{
+       that.globalData.address = res;
+     });
     this.getUserOpenId().then(res=>{
       that.globalData.openId = res;
     })
@@ -20,11 +20,7 @@ App({
         success (res) {
           var locationString = res.latitude + "," + res.longitude;
           wx.request({
-            url: 'http://apis.map.qq.com/ws/geocoder/v1/',
-            data: {
-              "key": "QNIBZ-CSNEO-UYQWW-SPOQZ-XEAM5-5AFKA",
-              "location": locationString
-            },
+            url: 'http://127.0.0.1:8080/address/currentAddress',
             method: 'GET',
             success: function (res) {
               //输出一下位置信息

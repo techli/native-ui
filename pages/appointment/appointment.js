@@ -9,7 +9,7 @@ Page({
   onLoad: function(){
     if(app.getUserOpenId.length==0){
       app.getUserOpenId().then(res=>{
-        this.setData({openId,res});
+        this.setData({openId:res});
       })
     }
   },
@@ -47,9 +47,7 @@ Page({
         duration: 2000//持续的时间
       })
     }
-    this.getUserOpenId().then(res=>{
-      that.globalData.openId = res;
-    })
+
     var data = {
       "openId": this.data.openId,
       "serviceId":value.serviceId,

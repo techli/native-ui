@@ -1,6 +1,5 @@
 //action.js
 //获取应用实例
-import appUtil from '../../utils/utils.js';
 var app = getApp()
 Page({
   data:{
@@ -64,7 +63,7 @@ Page({
   },
 
   onLoad: function(e){
-    this.setData({openId:app.openId});
+    this.setData({openId:app.globalData.openId});
     this.getAppointmentList();
   },
 
@@ -78,7 +77,7 @@ Page({
 
   getAppointmentList: function(e){
     var that = this;
-    var param = "pageNum="+this.data.pageNum+"&pageSize="+this.data.pageSize+"&openId="+app.openId+"&status="+this.data.status;
+    var param = "pageNum="+this.data.pageNum+"&pageSize="+this.data.pageSize+"&openId="+app.globalData.openId+"&status="+this.data.status;
     wx.request({
       url: app.nativeUrlPre+"appointment/listApply?"+param,
       success: function(res){

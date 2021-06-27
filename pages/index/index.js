@@ -4,41 +4,38 @@ var app = getApp()
 Page({
   data: {
     imageUrlPre: app.imageUrlPre,
-    isIndex: true,
-    appointment: '../../image/预约.png',
-    priceList: '../../image/回收价格.png',
-    minishop:'../../image/微信小商店.png',
+    appointment: app.imageUrlPre+'/index/预约.png',
+    priceList: app.imageUrlPre+'/index/回收价格.png',
+    minishop: app.imageUrlPre+'/index/微信小商店.png',
     indicatorDots: true,
     autoplay: true,
     interval: 5000,
-    duration: 1000,
-    // 此页面 页面内容距最顶部的距离
-    height: app.globalData.height * 2 + 20 , 
+    duration: 1000
+  },
+  gotoShopUrl(e){
+    var item = e.currentTarget.dataset.lockerid;
+    wx.request({
+      url: app.nativeUrlPre+"product/getProductDetail?appId="+item.shopInfo.appId+"&productId="+item.productId,
+      success: function(res){
+        wx.navigateTo({
+          url: res.data.list[0].shareInfo.path,
+        });
+      }
+    });
   },
   onLoad: function(){
     var that = this;
-    var barData = {
-      title: '首页',
-      isIndex: true,
-      address: app.globalData.address
-    }
-    that.setData({
-      navbarData: barData
-    });
-    if(app.globalData.address.length==0){
-      console.log('enenene');
-      app.getUserAddress().then(res=>{
-        console.log(res);
-        barData.address = res.result.address_reference.business_area.title;
-        that.setData({
-          navbarData: barData
-        });
+    app.getUserAddress().then(res=>{
+      wx.setNavigationBarTitle({
+        title:  res
       });
-    }else{
-      that.setData({
-        navbarData: barData
-      })
-    }
+    });
+    wx.request({
+      url: app.nativeUrlPre+"product/listProduct?pageNum=1&index=0",
+      success: function(res){
+        that.setData({productList: res.data.productList});
+      }
+    });
     wx.request({
       url: app.imageUrlPre+'/index/imageList',
       success (res) {

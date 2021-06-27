@@ -3,15 +3,8 @@
 var app = getApp()
 Page({
   data: {
-    touxiang: '../../image/头像.png',
-    userInfo: {},
-    // 组件所需的参数
-    navbarData: {
-      title: '我的', //导航栏 中间的标题
-      isIndex: false
-    },
-    // 此页面 页面内容距最顶部的距离
-    height: app.globalData.height * 2 + 20 , 
+    touxiang: app.imageUrlPre+'index/头像.png',
+    userInfo: {}, 
   },
   onLoad: function () {
     var that = this

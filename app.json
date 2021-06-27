@@ -2,7 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/appointment/appointment",
-    "pages/serviceList/serviceList",
+    "pages/shopList/shopList",
     "pages/about/about",
     "pages/priceList/priceList",
     "pages/problem/problem",
@@ -10,7 +10,7 @@
     "pages/service/service",
     "pages/me/me",
     "pages/result/result",
-    "pages/navigationBar/navigationBar",
+    "pages/shopDetail/shopDetail",
     "pages/productList/productList"
   ],
   "window": {
@@ -32,10 +32,16 @@
         "selectedIconPath": "image/homeactive.png"
       },
       {
-        "pagePath": "pages/serviceList/serviceList",
-        "text": "服务列表",
-        "iconPath": "image/菜单服务列表.png",
-        "selectedIconPath": "image/菜单服务列表选中.png"
+        "pagePath": "pages/shopList/shopList",
+        "text": "周边小店",
+        "iconPath": "image/菜单小店列表.png",
+        "selectedIconPath": "image/菜单小店列表选中.png"
+      },
+      {
+        "pagePath": "pages/productList/productList",
+        "text": "周边商品",
+        "iconPath": "image/菜单小商店.png",
+        "selectedIconPath": "image/菜单小商店选中.png"
       },
       {
         "pagePath": "pages/me/me",
@@ -60,5 +66,11 @@
     }
   },
   "usingComponents": {
+  },
+  "plugins": {
+    "小程序官方购物服务": {
+      "version": "1.3.2",
+      "provider": "wx34345ae5855f892d"
+    }
   }
 }

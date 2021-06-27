@@ -3,7 +3,7 @@
 var app = getApp()
 Page({
   data: {
-    logosrc:'../../image/天天周边.png',
+    logosrc: app.imageUrlPre+'index/天天周边.png',
     wxImage: app.imageUrlPre+'index/微信.png',
     indicatorDots: false,
     autoplay: true,
