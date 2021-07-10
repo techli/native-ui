@@ -1,3 +1,4 @@
+<web-view src="https://mobile.yangkeduo.com/duo_coupon_landing.html?goods_id=251091192371&pid=21717193_212398863&goods_sign=Y9L2mBx9dKdTOmJ1wvfZOuum65ISIRDz_JXsGQRqQU&zs_duo_id=2&cpsSign=CC_210627_21717193_212398863_31c49b70dc69bad49f43140e50b906cc&duoduo_type=2"></web-view>
 <view class="page" style="margin-top:-105px">
   <view class="weui-form">
     <form bindsubmit="formSubmit">

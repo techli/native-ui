@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/appointment/appointment",
     "pages/shopList/shopList",
+    "pages/productDetail/productDetail",
     "pages/about/about",
     "pages/priceList/priceList",
     "pages/problem/problem",
@@ -30,12 +31,6 @@
         "text": "首页",
         "iconPath": "image/home.png",
         "selectedIconPath": "image/homeactive.png"
-      },
-      {
-        "pagePath": "pages/shopList/shopList",
-        "text": "周边小店",
-        "iconPath": "image/菜单小店列表.png",
-        "selectedIconPath": "image/菜单小店列表选中.png"
       },
       {
         "pagePath": "pages/productList/productList",

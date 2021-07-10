@@ -4,14 +4,14 @@
             <mp-vtabs vtabs="{{catsList}}" activeTab="{{activeTab}}" bindtabclick="onTabClick" bindchange="onChange"
                 class="test">
                 <view wx:for="{{productList}}" wx:key="unique" id="{{index}}" class="weui-panel__bd">
-                    <view bindtap="gotoShopUrl" data-lockerid="{{item}}" class="weui-media-box weui-media-box_appmsg"
+                    <view bindtap="gotoProduct" data-lockerid="{{item}}" class="weui-media-box weui-media-box_appmsg"
                         hover-class="weui-cell_active">
                         <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
                             <image class="weui-media-box__thumb" src="{{item.product.info.headImg[0]}}" />
                         </view>
                         <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
                             <view class="weui-media-box__title">{{item.product.info.title}}</view>
-                            <view class="weui-media-box__desc">最低价格:{{item.product.info.minPrice/100}}元
+                            <view class="weui-media-box__desc">最低:{{item.product.info.minPrice/100}}元
                             </view>
                         </view>
                     </view>

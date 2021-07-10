@@ -8,22 +8,6 @@
 </swiper>
 <view class="app-title">功能菜单</view>
 <view class="plate">
-  <navigator url="/pages/appointment/appointment" hover-class="navigator-hover" class="plate-item">
-     <view class="plate-img">
-       <image src="{{appointment}}"></image>
-       </view>
-       <text class="plate-info">
-        回收预约
-       </text>
-  </navigator>
-  <navigator url="/pages/priceList/priceList" hover-class="navigator-hover" class="plate-item">
-     <view class="plate-img">
-       <image src="{{priceList}}"></image>
-       </view>
-       <text class="plate-info">
-        回收价格
-       </text>
-  </navigator>
   <navigator appId="wx547f7251ac3ff9f9" target='miniProgram' hover-class="navigator-hover" class="plate-item">
      <view class="plate-img">
        <image src="{{minishop}}"></image>
@@ -38,11 +22,11 @@
  <view class="app-title">热卖商品</view>
   <view class="app-moduler">
     <view class="mod-item" wx:for="{{productList}}" wx:key="unique" id="{{index}}">
-      <view bindtap="gotoShopUrl" data-lockerid="{{item}}"  class="mod-img">
+      <view bindtap="gotoProduct" data-lockerid="{{item}}"  class="mod-img">
         <image src="{{item.product.info.headImg[0]}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-         <text>{{item.product.info.title}}</text>  
+         <text>[微信小店]{{item.product.info.title}}</text>  
       </view>
     </view>
   </view>

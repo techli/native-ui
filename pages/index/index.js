@@ -17,8 +17,22 @@ Page({
     wx.request({
       url: app.nativeUrlPre+"product/getProductDetail?appId="+item.shopInfo.appId+"&productId="+item.productId,
       success: function(res){
-        wx.navigateTo({
-          url: res.data.list[0].shareInfo.path,
+        console.log(res.data.list[0].shareInfo.promotionUrl);
+        wx.navigateTo({  
+          url: res.data.list[0].shareInfo.promotionUrl,
+        });
+      }
+    });
+  },
+  gotoProduct(e){
+    var item = e.currentTarget.dataset.lockerid;
+    wx.request({
+      url: app.nativeUrlPre+"product/getProductDetail?appId="+item.shopInfo.appId+"&productId="+item.productId,
+      success: function(res){
+        wx.navigateToMiniProgram({
+          appId: item.shopInfo.appId,
+          path: res.data.list[0].shareInfo.path,
+          fail: (err) => { },
         });
       }
     });

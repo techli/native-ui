@@ -60,15 +60,31 @@ CustomPage({
     })
     
   },
+  gotoProduct(e){
+    var item = e.currentTarget.dataset.lockerid;
+    wx.request({
+      url: app.nativeUrlPre+"product/getProductDetail?appId="+item.shopInfo.appId+"&productId="+item.productId,
+      success: function(res){
+        wx.navigateToMiniProgram({
+          appId: item.shopInfo.appId,
+          path: res.data.list[0].shareInfo.path,
+          fail: (err) => { },
+        });
+      }
+    });
+  },
   onTabClick(e) {
     const index = e.detail.index;
     this.setData({index: index});
+    this.setData({pageNum: 1});
+
     var that = this;
 
     wx.request({
       url: app.nativeUrlPre+"product/listProduct?pageNum="+that.data.pageNum+"&index="+index,
       success: function(res){
         that.setData({rowCount: that.data.total});
+        console.log(res.data.productList);
         that.setData({productList: res.data.productList});
       }
     })

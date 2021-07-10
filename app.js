@@ -20,7 +20,7 @@ App({
         success (res) {
           var locationString = res.latitude + "," + res.longitude;
           wx.request({
-            url: 'https://www.techli.top:8443/native-api/address/currentAddress',
+            url: 'https://www.techli.top:8443/native-api/address/currentAddress?lat='+res.latitude+'&lgt='+res.longitude,
             method: 'GET',
             success: function (res) {
               //输出一下位置信息
