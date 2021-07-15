@@ -3,30 +3,17 @@
         <view class="weui-panel weui-panel_access">
             <view wx:for="{{shopList}}" class="weui-panel__bd weui-flex">
                 <view class="weui-flex__item" bindtap="gotoProductList" data-lockerid="{{item}}">
-                    <navigator url="/pages/shopDetail/shopDetail?appId={{item.appId}}&name={{item.name}}" class="weui-media-box weui-media-box_appmsg">
-                        <view class="weui-media-box__hd">
-                            <image class="weui-media-box__thumb" src="{{item.headImgUrl}}" />
-                        </view>
+                    <view class="weui-media-box weui-media-box_appmsg">
                         <view class="weui-media-box__bd">
-                            <h4>{{item.name}}</h4>
+                            <h4>{{item.name||item.appId}}</h4>
                         </view>
-                    </navigator>
+                        <button style='border-color: #ece9e9;font-size: 10pt !important;' data-lockerid="{{item}}" bindtap="gotoSetArea" size="mini" plain = "true">设置区域</button>
+                    </view>
                 </view>
             </view>
             <view wx:if="{{shopList.length==0}}" class="weui-loadmore weui-loadmore_line">
                 <span class="weui-loadmore__tips">暂无数据</span>
             </view>
-        </view>
-    </view>
-    <view class="page__bd page__bd_spacing" style="margin-top:20px;">
-        <view class="weui-footer">
-            <p class="weui-footer__links">
-                <view href="javascript:" class="weui-footer__link">
-                    <navigator url="/pages/about/about">
-                        <text style="color:#3370CC;">欢迎加入我们</text>
-                    </navigator>
-                </view>
-            </p>
         </view>
     </view>
 </view>

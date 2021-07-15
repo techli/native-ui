@@ -1,7 +1,7 @@
 {
-  "navigationBarTitleText": "周边商品",
   "usingComponents": {
     "mp-vtabs": "@miniprogram-component-plus/vtabs",
     "mp-vtabs-content": "@miniprogram-component-plus/vtabs-content"
-  }
+  },
+  "enablePullDownRefresh": true
 }

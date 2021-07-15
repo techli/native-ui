@@ -8,27 +8,52 @@
 </swiper>
 <view class="app-title">功能菜单</view>
 <view class="plate">
-  <navigator appId="wx547f7251ac3ff9f9" target='miniProgram' hover-class="navigator-hover" class="plate-item">
+  <navigator url="/pages/enter/enter" hover-class="navigator-hover" class="plate-item">
      <view class="plate-img">
-       <image src="{{minishop}}"></image>
+       <image src="{{enter}}"></image>
        </view>
        <text class="plate-info">
-        精选商品
+        小店入驻
+       </text>
+  </navigator>
+  <navigator url="/pages/shopList/shopList" hover-class="navigator-hover" class="plate-item">
+     <view class="plate-img">
+       <image src="{{area}}"></image>
+       </view>
+       <text class="plate-info">
+        服务区域
+       </text>
+  </navigator>
+  <navigator url="/pages/webview/webview?url={{zhinanUrl}}" hover-class="navigator-hover" class="plate-item">
+     <view class="plate-img">
+       <image src="{{zhinan}}"></image>
+       </view>
+       <text class="plate-info">
+        入驻指南
        </text>
   </navigator>
 </view>
-<view class="clear"></view>
-<view class="appointment">
+<view>
  <view class="app-title">热卖商品</view>
-  <view class="app-moduler">
+  <view>
     <view class="mod-item" wx:for="{{productList}}" wx:key="unique" id="{{index}}">
       <view bindtap="gotoProduct" data-lockerid="{{item}}"  class="mod-img">
         <image src="{{item.product.info.headImg[0]}}" class="mod-image"></image>
       </view>
       <view class="mod-title">
-         <text>[微信小店]{{item.product.info.title}}</text>  
+         <text>{{item.product.info.title}}</text>  
+         <view style="font-size: 9px;width:50px;padding:10rpx; font-weight: 400; padding: 2px 0;position: absolute;top:0;right:0%;transform:translateX(0%);text-align:right;">
+        <text style="color:gray;padding-right:10rpx;">微信小店</text>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{!productList}}" class="mod-item">
+      <view class="mod-img">
+        <image src="{{noProduct}}" class="mod-image"></image>
+      </view>
+      <view class="mod-title">
+         <text>暂无热卖</text>  
       </view>
     </view>
   </view>
 </view>
-<view class="clear"></view>

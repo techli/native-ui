@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/techli/recycle#readme",
   "dependencies": {
+    "umtrack-wx": "^2.7.1",
     "weui-miniprogram": "^1.0.8"
   }
 }

@@ -1,17 +1,22 @@
 var app = getApp()
 Page({
   data: {
-    productUrl: ''
+    productUrl: '',
+    indicatorDots: true,
+    autoplay: true,
+    interval: 5000,
+    duration: 1000,
+    currentProduct: null
   },
   onLoad(options) {
+    this.setData({currentProduct: app.globalData.currentProduct});
+  },
+  gotoProduct(e){
     var that = this;
-    wx.request({
-      url: app.nativeUrlPre+"product/getProductDetail?appId="+options.appId+"&productId="+options.productId,
-      success: function(res){
-        that.setData({
-          productUrl:res.data.list[0].shareInfo.promotionUrl
-        });
-      }
+    wx.navigateToMiniProgram({
+      appId: that.data.currentProduct.shareInfo.appId,
+      path: that.data.currentProduct.shareInfo.path,
+      fail: (err) => { },
     });
   }
 })

@@ -2,43 +2,29 @@ var app = getApp()
 Page({
   onShareAppMessage() {
     return {
+      address: null,
       title: 'recycle-view',
       path: 'page/weui/example/recycle-view/recycle-view'
     }
   },
   data: {
-    pageNum: 1,
-    rowCount: 0,
     shopList:[]
   },
   onLoad(options) {
+    this.setData({address: app.globalData.address});
     var that = this;
     wx.request({
-      url: app.nativeUrlPre+"shop/listShop?pageNum="+this.data.pageNum,
+      url: app.nativeUrlPre+"shop/listMyShop?openId="+app.globalData.openId,
       success: function(res){
-        that.setData({rowCount: res.data.total});
-        that.setData({shopList: res.data.list});
+        that.setData({shopList: res.data});
       }
     });  
   },
-  onReachBottom: function(e){
-    if(this.data.shopList.length==this.data.rowCount){
-      return false;
-    }
-    this.setData({pageNum: this.data.pageNum+1});
-    var that = this;
-    wx.request({
-      url: app.nativeUrlPre+"shop/listShop?pageNum="+that.data.pageNum,
-      success: function(res){
-        that.setData({rowCount: that.data.total});
-        that.setData({shopList: that.data.shopList.concat(res.data.productList)});
-      }
-    })
-  },
-  gotoProductList: function(e){
+  gotoSetArea: function(e){
     var item = e.currentTarget.dataset.lockerid;
+    var url = '/pages/area/area?appId='+item.appId;
     wx.navigateTo({
-      url: '/pages/shopDetail/shopDetail?appId='+item.appId,
+      url: url
     })
   },
   onReady() {

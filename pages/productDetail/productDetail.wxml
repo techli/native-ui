@@ -1,1 +1,22 @@
-<web-view src="{{productUrl}}"></web-view>
+<!-- <web-view src="{{productUrl}}"></web-view> -->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{currentProduct.productInfo.headImg}}" wx:key="unique" wx:for-item="item">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<scroll-view scroll-y="true">
+  <view class="detail">
+    <text class="price">最低 ￥{{currentProduct.productInfo.minPrice/100}}</text>
+    <text class="title">{{currentProduct.productInfo.title}}</text>
+    <text>
+      {{currentProduct.shareInfo.couponPromotionWording||currentProduct.shareInfo.promotionWording}}
+    </text>
+  </view>
+  <view class="temp"></view>
+</scroll-view>
+<!-- 底部悬浮栏 -->
+<view class="detail-nav">
+  <button class="button-red" style="margin-right:0rpx;" bindtap="gotoProduct" formType="submit">去{{currentProduct.productInfo.shopName}}购买</button>
+</view>

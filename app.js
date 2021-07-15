@@ -1,7 +1,15 @@
 //app.js
+import 'umtrack-wx';
 App({
   imageUrlPre: "https://www.techli.top/images/",
-  nativeUrlPre: "https://www.techli.top:8443/native-api/",
+  nativeUrlPre: "https://www.techli.top/native/v1/",
+  umengConfig: {
+    appKey: '60ecc7182a1a2a58e7d337c3', 
+    useOpenid: true,
+    autoGetOpenid: false,
+    debug: true, //是否打开调试模式
+    uploadUserInfo: true
+  },
   onLaunch: function () {
     var that = this;
      this.getUserAddress().then(res=>{
@@ -9,18 +17,21 @@ App({
      });
     this.getUserOpenId().then(res=>{
       that.globalData.openId = res;
+      wx.uma.setOpenid(res);
     })
   },
 
   getUserAddress: function(){
+    var that = this;
     return new Promise((reslove, reject) => {
       wx.getLocation({
         type: 'wgs84',
         isHighAccuracy: true,
         success (res) {
-          var locationString = res.latitude + "," + res.longitude;
+          that.globalData.lat = res.latitude;
+          that.globalData.lng = res.longitude;
           wx.request({
-            url: 'https://www.techli.top:8443/native-api/address/currentAddress?lat='+res.latitude+'&lgt='+res.longitude,
+            url: that.nativeUrlPre+'address/currentAddress?lat='+res.latitude+'&lgt='+res.longitude,
             method: 'GET',
             success: function (res) {
               //输出一下位置信息
@@ -81,8 +92,11 @@ App({
   globalData:{
     share: false,  // 分享默认为false
     height: 20,
+    lat: null,
+    lng: null,
     openId: null,
     address: '',
+    currentProduct: null,
     userInfo: null
   }
 })
